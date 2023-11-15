@@ -1,0 +1,78 @@
+
+#!/bin/bash
+
+# Define version
+VERSION="0.1.0"
+
+# Function to display help
+display_help() {
+    echo "Usage: command1 [OPTION]"
+    echo "This is command1 version $VERSION, demonstrating functionality."
+    echo ""
+    echo "Options:"
+    echo "  -C, --cpuinfo      Show cpu info"
+    echo "  -M  --memoryinfo   Show memory info"
+    echo "  -u, --uptime       Show system uptime"
+    echo "  -c, --current-user Show current user"
+    echo "  -d, --documentation Display full documentation"
+    echo "  -h, --help         Display this help and exit"
+    echo "  -v, --version      Display version information"
+    echo ""
+    echo "For more detailed information, run 'command1 --documentation'"
+}
+
+# Function to display full documentation
+display_documentation() {
+    echo "COMMAND1 DOCUMENTATION"
+    echo "----------------------"
+    echo "This command demonstrates various functionalities."
+    echo ""
+    echo "Options and Functionalities:"
+    echo " -C, --cpuinfo      Show cpu info"
+    echo " -M, --memoryinfo   Show memory info"
+    echo "-u, --uptime:   Show system uptime"
+    echo "-c, --current-user: Show current user"
+    echo "-h, --help:     Display help message"
+    echo "-d, --documentation: Display full documentation (this message)"
+    echo "-v, --version:  Display version information"
+    echo ""
+    echo "Usage Examples:"
+    echo "  command1 -u            # Show system uptime"
+    echo "  command1 -c            # Show current user"
+    echo "  command1 --help        # Displays help message"
+}
+
+show_memoryinfo(){
+    echo "Memory Info:"
+    free
+}
+show_cpuinfo()
+{
+    echo "CPU Info:"
+    lscpu
+}
+# Functionality to display system uptime
+show_uptime() {
+    echo "System uptime:"
+    uptime
+}
+
+# Functionality to display current user
+show_current_user() {
+    echo "Current user:"
+    whoami
+}
+
+# Check for command line arguments
+if [[ $# -eq 0 ]]; then
+    display_help
+    exit 1
+fi
+For Easy Medium Level--
+
+Goto file directory using.... cd directory name
+run.. Bash filename.sh
+run commands
+Like you want to run a command :
+$ internsctl cpu getinfo (Like in a way you can run all commands)
+
